@@ -1,220 +1,205 @@
+/* ---------------------------
+   GLOBAL PAGE STYLING
+----------------------------*/
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     margin: 0;
     padding: 0;
-    background: #020617;
-    color: #f9fafb;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
 }
 
 .page {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px 16px 40px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
+/* ---------------------------
+   HEADER
+----------------------------*/
 header {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
 
 h1 {
-    font-size: 1.9rem;
-    margin-bottom: 0.4rem;
+    color: #58a6ff;
+    font-size: 2rem;
 }
 
 .subtitle {
-    color: #9ca3af;
-    font-size: 0.95rem;
+    color: #8b949e;
 }
 
+/* ---------------------------
+   SECTIONS
+----------------------------*/
 section {
-    margin-bottom: 24px;
-    background: #020617;
-    border-radius: 12px;
-    padding: 16px 18px;
-    border: 1px solid #1f2937;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+    margin-bottom: 26px;
+    padding: 20px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.05);
 }
 
-h2 {
-    margin-top: 0;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
+/* ---------------------------
+   FORM CONTROLS
+----------------------------*/
 .controls form {
     display: grid;
-    gap: 10px;
+    gap: 12px;
 }
 
 .form-row {
     display: flex;
     flex-direction: column;
-    gap: 4px;
 }
 
-.form-row label {
+label {
+    color: #9ecbff;
     font-size: 0.9rem;
-    color: #e5e7eb;
 }
 
-.form-row input[type="text"],
-.form-row input[type="number"] {
-    padding: 6px 8px;
-    border-radius: 6px;
-    border: 1px solid #374151;
-    background: #030712;
-    color: #e5e7eb;
+input[type="text"],
+input[type="number"] {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    background: #0d1117;
+    color: #c9d1d9;
+    font-size: 0.95rem;
 }
 
-.form-row input:focus {
+input:focus {
     outline: none;
-    border-color: #3b82f6;
-}
-
-.checkbox-row {
-    flex-direction: row;
-    align-items: center;
-}
-
-.checkbox-row label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    border-color: #58a6ff;
 }
 
 button {
-    padding: 8px 12px;
-    border-radius: 999px;
-    border: none;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: #f9fafb;
-    font-weight: 500;
-    cursor: pointer;
     width: fit-content;
+    padding: 10px 18px;
+    background: linear-gradient(90deg, #238636, #2ea043);
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 button.secondary {
-    background: #4b5563;
+    background: #6e7681;
 }
 
-button:disabled {
-    opacity: 0.6;
-    cursor: default;
-}
-
-.visual .diagram {
+/* ---------------------------
+   PROCESS BOXES
+----------------------------*/
+.diagram {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    gap: 18px;
+    gap: 20px;
     align-items: center;
 }
 
 .process {
-    background: #020617;
+    padding: 15px;
     border-radius: 12px;
-    border: 1px solid #1f2937;
-    padding: 10px;
+    border: 1px solid #30363d;
+    background: #0d1117;
 }
 
 .process h3 {
-    margin: 0 0 6px;
-    font-size: 1rem;
-}
-
-.process-body {
-    background: #030712;
-    border-radius: 10px;
-    padding: 8px;
-    font-size: 0.9rem;
-    min-height: 70px;
-    border: 1px solid #111827;
+    margin-top: 0;
+    color: #58a6ff;
 }
 
 .process-parent {
-    box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
 }
 
 .process-child {
-    box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 0 15px rgba(88, 255, 166, 0.3);
 }
 
-.pipe {
-    text-align: center;
+.process-body {
+    margin-top: 10px;
+    padding: 12px;
+    min-height: 80px;
+    border-radius: 10px;
+    background: #161b22;
 }
 
+/* ---------------------------
+   PIPE ANIMATION
+----------------------------*/
 .pipe-label {
+    text-align: center;
+    color: #8b949e;
     font-size: 0.85rem;
-    margin-bottom: 6px;
-    color: #9ca3af;
+    margin-bottom: 8px;
 }
 
 .pipe-line {
-    width: 200px;
-    height: 10px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #1e293b, #020617);
+    width: 240px;
+    height: 12px;
+    background: linear-gradient(90deg, #30363d, #161b22);
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
-    border: 1px solid #111827;
+    border: 1px solid #30363d;
 }
 
 .pipe-message {
     position: absolute;
     top: -18px;
     left: 0;
-    white-space: nowrap;
-    font-size: 0.8rem;
-    padding: 2px 6px;
+    background: #238636;
+    color: white;
+    padding: 4px 10px;
     border-radius: 999px;
-    background: #22c55e;
-    color: #022c22;
+    font-size: 0.85rem;
+    white-space: nowrap;
 }
 
+/* ---------------------------
+   STEPS + LOGS
+----------------------------*/
 .steps-logs {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 16px;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
 }
 
-.steps-panel,
-.logs-panel {
-    background: #020617;
-    border-radius: 10px;
+.steps-panel ol {
+    padding-left: 20px;
 }
 
-#stepsList {
-    margin: 0;
-    padding-left: 18px;
-    font-size: 0.9rem;
-}
-
-#stepsList li {
-    margin-bottom: 6px;
-}
-
-.placeholder {
-    color: #6b7280;
+.steps-panel ol li {
+    margin-bottom: 10px;
 }
 
 .logs-box {
-    background: #030712;
-    border-radius: 8px;
-    padding: 8px;
-    font-family: "JetBrains Mono", "Consolas", monospace;
-    font-size: 0.8rem;
-    max-height: 220px;
+    background: #0d1117;
+    border-radius: 10px;
+    padding: 12px;
+    font-family: Consolas, "JetBrains Mono", monospace;
+    border: 1px solid #30363d;
+    height: 260px;
     overflow-y: auto;
-    border: 1px solid #111827;
+    font-size: 0.9rem;
 }
 
-.logs-box p {
-    margin: 2px 0;
+.placeholder {
+    color: #6e7681;
 }
 
+/* ---------------------------
+   FOOTER
+----------------------------*/
 footer {
+    margin-top: 20px;
     text-align: center;
-    font-size: 0.8rem;
-    color: #6b7280;
-    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #6e7681;
 }
