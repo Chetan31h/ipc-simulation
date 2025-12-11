@@ -126,3 +126,91 @@ Add message queues
 Add shared memory visualization
 
 Add real C backend option
+🚀 Deployment on Render (Live Hosting)
+
+This project is fully configured for Render free hosting, allowing the Flask backend and UI to run online.
+
+1️⃣ Connect GitHub repository
+
+Login to Render → New → Web Service
+Select the repo: ipc-simulation
+
+2️⃣ Set Build & Run Commands
+
+Build Command:
+
+pip install -r requirements.txt
+
+
+Start Command:
+
+gunicorn app:app
+
+3️⃣ Environment Settings
+Setting	Value
+Runtime	Python 3
+Instance	Free Tier
+Auto Deploy	Yes
+Region	Any
+4️⃣ Repository Requirements
+
+Render needs these files:
+
+File	Purpose
+Procfile	Tells Render how to start Flask
+requirements.txt	All Python dependencies
+app.py	Your Flask backend
+static/	CSS + JS
+templates/	HTML frontend
+
+✔ You already have all of these.
+
+5️⃣ Deployment Output
+
+After deployment, Render will give you a public URL like:
+
+https://ipc-simulation.onrender.com
+
+
+Your simulation will run online with full:
+
+animations
+
+logs
+
+parent/child updates
+
+encryption
+
+IPC visualization
+
+browser-based UI
+
+🏁 Final Notes
+
+This project demonstrates:
+
+Linux IPC (pipes)
+
+Parent/child process simulation
+
+Encryption/decryption workflow
+
+Authentication token system
+
+Real-time step visualization
+
+Flask backend + HTML/CSS/JS frontend
+
+Deployment on Render cloud
+
+Perfect for college viva, portfolio, and systems programming learning.
+
+🎉 STEP 2 — Commit #7 (final commit)
+
+Run:
+
+git add README.md
+git commit -m "Add Render deployment instructions and finalize documentation"
+git push
+
